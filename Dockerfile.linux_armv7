@@ -1,0 +1,10 @@
+FROM scratch
+
+
+VOLUME /srv
+EXPOSE 80
+
+COPY .docker.json /.filebrowser.json
+COPY filebrowser.linux_armv7 /filebrowser
+
+ENTRYPOINT [ "/filebrowser" ]
