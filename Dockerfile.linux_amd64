@@ -4,7 +4,7 @@ FROM scratch
 VOLUME /srv
 EXPOSE 80
 
-COPY .docker.json /.filebrowser.json
+COPY filebrowser.json /.filebrowser.json
 COPY filebrowser.linux_amd64 /filebrowser
 
 ENTRYPOINT [ "/filebrowser" ]
